@@ -1,0 +1,14 @@
+applyTwice f x = f(f x)
+applyTwice (+3) 10
+
+
+
+
+
+
+
+
+
+
+flip' f y x=f x y
+flip' zip[1,2,3,4,5]"hello"

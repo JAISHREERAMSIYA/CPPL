@@ -1,0 +1,6 @@
+bmiTell :: (RealFloat a) => a-> String
+bmiTell bmi
+	| bmi <= 18.5 = "You are under wight!"
+	| bmi <= 25.0 = "You are Supposedly normal"
+	| bmi <= 30.0 = "You're Fat!"
+	| otherwise = "Something Wrong"             //bmiTell.hs
