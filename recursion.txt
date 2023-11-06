@@ -1,14 +1,17 @@
-applyTwice f x = f(f x)
-applyTwice (+3) 10
+fact :: int-> int
+fact 0=0
+fact 1=1
+fact n = n*fact(n-1)
+
+
+fib :: int->int
+fib 0=0
+fib 1=1
+fib n= fib(n-1)+fib(n-2)
 
 
 
 
-
-
-
-
-
-
-flip' f y x=f x y
-flip' zip[1,2,3,4,5]"hello"
+natSum :: int -> int
+natSum 0=0
+natSum n = n+natSum(n-1)
