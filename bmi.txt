@@ -1,6 +1,14 @@
-bmiTell :: (RealFloat a) => a-> String
+bmiTell :: (RealFloat a) => a -> String
 bmiTell bmi
-	| bmi <= 18.5 = "You are under wight!"
-	| bmi <= 25.0 = "You are Supposedly normal"
-	| bmi <= 30.0 = "You're Fat!"
-	| otherwise = "Something Wrong"             //bmiTell.hs
+  | bmi <= 18.5 = "You are underweight!"
+  | bmi <= 25.0 = "You are Supposedly normal"
+  | bmi <= 30.0 = "You're Fat!"
+  | otherwise = "Something Wrong"
+main :: IO ()
+main = do
+  putStrLn "Enter your BMI:"
+  input <- getLine
+  let bmi = read input :: Double
+  let message = bmiTell bmi
+  putStrLn ("BMI Category: " ++ message)
+    
